@@ -15,7 +15,21 @@
     "db:migrate": "prisma migrate dev",
     "db:reset": "prisma migrate reset"
   },
+  {
   "dependencies": {
+    // Remove or update problematic AI SDKs
+    // "z-ai-web-dev-sdk": "^0.0.15",  ← Remove if causing issues
+    
+    // Add proper Genkit deps
+    "@genkit-ai/flow": "^0.7.0",
+    "@genkit-ai/googleai": "^0.7.0",
+    "@genkit-ai/react": "^0.7.0"
+  },
+  "scripts": {
+    "build": "prisma generate && next build",
+    "vercel-build": "npm run build"
+  }
+}
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
@@ -82,8 +96,8 @@
     "z-ai-web-dev-sdk": "^0.0.15",
     "zod": "^4.0.2",
     "zustand": "^5.0.6"
-  },
-  "devDependencies": {
+  }
+    "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/react": "^19",
     "@types/react-dom": "^19",
