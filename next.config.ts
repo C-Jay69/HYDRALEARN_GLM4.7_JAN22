@@ -14,6 +14,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // If you're having image optimization issues
   },
-};
 
+}, 
 export default nextConfig;
