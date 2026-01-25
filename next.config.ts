@@ -4,9 +4,6 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   // Optional: External packages for AI
   transpilePackages: ['@genkit-ai', '@google/generative-ai'],
   // Optional: Add these for better Vercel compatibility
