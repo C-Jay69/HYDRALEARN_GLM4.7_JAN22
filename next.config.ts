@@ -4,12 +4,20 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Optional: External packages for AI
+  
+  // CRITICAL FOR VERCEL: Add basePath
+  basePath: '', // Leave empty if using root domain
+  
+  // Use 'standalone' for better Vercel deployment
+  output: 'standalone',
+  
   transpilePackages: ['@genkit-ai', '@google/generative-ai'],
-  // Optional: Add these for better Vercel compatibility
   images: {
-    unoptimized: true, // If you're having image optimization issues
+    unoptimized: true,
   },
+  
+  // Add these for better routing
+  trailingSlash: false,
 };
 
 export default nextConfig;
