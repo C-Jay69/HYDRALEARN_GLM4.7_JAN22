@@ -1,23 +1,24 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  // ⚠️ CRITICAL CHANGE: Force static export
+  output: 'export',
   
-  // CRITICAL FOR VERCEL: Add basePath
-  basePath: '', // Leave empty if using root domain
-  
-  // Use 'standalone' for better Vercel deployment
-  output: 'standalone',
-  
-  transpilePackages: ['@genkit-ai', '@google/generative-ai'],
+  // ⚠️ Required for 'export'
   images: {
     unoptimized: true,
   },
   
-  // Add these for better routing
-  trailingSlash: false,
+  // Your existing settings
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  transpilePackages: ['@genkit-ai', '@google/generative-ai'],
+  
+  // Remove or comment these if they exist:
+  // basePath: '',
+  // assetPrefix: '',
+  // trailingSlash: true,
 };
 
 export default nextConfig;

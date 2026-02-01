@@ -16,8 +16,9 @@ export default function Home() {
         width: '6rem',
         height: '6rem'
       }}>
+        {/* REPLACE WITH BASE64 LOGO */}
         <img
-          src="/logo.svg"
+          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNDgiIGN5PSI0OCIgcj0iNDAiIGZpbGw9IiMwMDAwMDAiLz4KPC9zdmc+"
           alt="Z.ai Logo"
           style={{
             width: '100%',
@@ -26,6 +27,7 @@ export default function Home() {
           }}
         />
       </div>
+      <h1>Site is Working!</h1>
     </div>
   )
 }

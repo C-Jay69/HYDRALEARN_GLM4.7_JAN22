@@ -5,17 +5,15 @@
   "engines": {
     "node": ">=18"
   },
+  {
   "scripts": {
-    "dev": "next dev -p 3000 2>&1 | tee dev.log",
-    "build": "prisma generate && next build",
-    "vercel-build": "npm run build",
+    "dev": "next dev",
+    "build": "next build", // ⚠️ Remove "prisma generate && "
     "start": "next start",
     "lint": "eslint .",
-    "db:push": "prisma db push",
-    "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev",
-    "db:reset": "prisma migrate reset"
-  },
+    "vercel-build": "next build"
+  }
+}
   "dependencies": {
     "genkit": "latest",
     "@genkit-ai/googleai": "latest",
