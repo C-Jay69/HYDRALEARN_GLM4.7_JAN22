@@ -8,7 +8,8 @@
   {
   "scripts": {
     "dev": "next dev",
-    "build": "next build", // ⚠️ Remove "prisma generate && "
+    "build": "next build",
+    "postinstall": "prisma generate",
     "start": "next start",
     "lint": "eslint .",
     "vercel-build": "next build"
